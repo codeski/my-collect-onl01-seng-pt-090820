@@ -1,13 +1,9 @@
 def my_collect(array) 
-  counter = 0 
-  if counter < array.length 
-    while counter < array.length 
-      yield
-      counter += 1 
+  i = 0 
+  collection = []
+    while i < array.length 
+      collection << yield(array[i])
+      i += 1 
     end
-  else
+    collection 
 end
-array
-end
-    
-
